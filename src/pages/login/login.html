@@ -1,0 +1,38 @@
+<ion-content class="background">
+  <div class="flex-center">
+    <ion-card class="custom-item">
+      <ion-card-content>  
+        <ion-card-header>
+          <ion-card-title class="ion-text-center custom-title">Bienvenido(a)</ion-card-title>
+        </ion-card-header>
+       
+        <form>   
+          <ion-item>     
+            <ion-label position="floating"  class="custom-label"></ion-label>
+            <ion-input type="text" placeholder="Nombre de Usuario" 
+            [(ngModel)]="user" name="user"></ion-input>
+            <ion-icon name="person" item-start></ion-icon>
+          </ion-item>     
+          <ion-item>          
+            <ion-label position="floating" class="custom-label" ></ion-label>        
+            <ion-input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Contraseña" 
+            [(ngModel)]="pass" name="password"   (ngModelChange)="pass = $event.toUpperCase()">
+              
+            </ion-input>
+           
+            <ion-icon name="lock" item-start></ion-icon>
+            <button ion-button clear item-end class="dark" (click)="toggleShowPassword()">
+              <ion-icon name="{{ showPassword ? 'eye-off' : 'eye' }}"></ion-icon>
+            </button>
+          </ion-item>   
+          <button ion-button expand="block" class="custom-button " (click)="inicio()">
+            <ion-icon name="log-in"></ion-icon> Ingresar
+          </button>  
+          <button ion-button expand="block" class="custom-button" (click)="salir()">
+            <ion-icon name="log-out"></ion-icon> Salir
+          </button>                    
+        </form>   
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

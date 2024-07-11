@@ -1,0 +1,177 @@
+.search {
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  border: 1px solid black;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+}
+
+.material-border {
+  border: 2px solid #1E6091;
+  padding: 10px;
+  position: relative;
+}
+
+.enumeration-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background-color: #fff; /* Color de fondo */
+  padding: 5px;
+  border: 1px solid #1E6091;
+  border-radius: 50%;
+}
+
+.input-large {
+  font-size: 16px;
+  width: 100%;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container ion-item {
+  margin-bottom: 10px;
+}
+
+.button-mat {
+  flex-shrink: 0;
+  margin-right: 50% !important;
+}
+
+.input-card, .info-card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+  background: #FBB02D;
+  margin-bottom: 50px !important;
+}
+
+.toolbar-background {
+  background-color: #000000;
+}
+
+.toolbar-title {
+  color: white;
+  font-weight: bold;
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+  color: white !important;
+  margin-right: 10px !important;
+}
+
+.card-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 10vh;
+}
+
+.name-exp {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  white-space: normal;
+  max-width: unset;
+}
+
+.name-material {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  white-space: normal;
+  max-width: unset;
+  font-family: "Arial Black", Arial, sans-serif;
+}
+
+ion-card-title.ion-text-center {
+  text-align: center !important;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button.button-mat {
+  background: hsl(0, 0%, 0%);
+  color: rgb(255, 255, 255);
+  letter-spacing: 2.5px;
+}
+
+button.button-mat:hover {
+  background-color: #ff9d0a !important;
+  color: #000000;
+}
+
+.input-field {
+  border-radius: 5px;
+}
+
+.info-button {
+  margin-top: 10px;
+}
+
+p.info {
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+
+.almacen {
+  color: #1E6091 !important;
+}
+
+.medida {
+  text-decoration: underline;
+}
+
+.material {
+  min-height: 100vh;
+  background-image: url("https://fundahrse.org/wp-content/uploads/2015/09/Tres-Valles.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center bottom 10px;
+}
+
+.background-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  z-index: 1;
+}
+
+.background-image img {
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-in {
+  animation: fadeIn 3s infinite;
+}
+
+.hr {
+  border-bottom: 2px solid #bfbdbd;
+  margin: 0px 0;
+  width: 100%;
+}/*# sourceMappingURL=material.css.map */

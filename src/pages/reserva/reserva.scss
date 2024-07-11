@@ -1,0 +1,177 @@
+.search {
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+  }
+  
+  .input-large {
+    font-size: 16px; 
+    width: 100%; 
+  }
+  
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-mat {
+    flex-shrink: 0; 
+    margin-right: 50% !important;
+    font-size: 2.3vw; 
+  }
+  .input-card, .info-card {
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-card{
+  background: #1E6091;
+  margin-bottom: 50px !important;
+  }
+  
+  .card-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 10vh;
+  }
+  
+  .name-exp {
+    font-weight: bold; 
+    font-size: 3.5vw; 
+    margin-bottom: 10px; 
+    text-transform: uppercase;
+    white-space: normal; 
+    max-width: unset;
+    color: #030303;
+  }
+  
+  .name-material{
+    font-weight: bold; 
+    font-size: 3.5vw; 
+    margin-bottom: 10px; 
+    text-transform: uppercase;
+    white-space: normal; 
+    max-width: unset;
+    font-family: "Arial Black", Arial, sans-serif;
+  }
+  
+  ion-card-title.ion-text-center {
+    text-align: center !important; 
+    font-weight: bold; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  button.button-mat{
+    background: hsl(0, 0%, 0%);
+    color: rgb(255, 255, 255);
+    letter-spacing: 2.5px;
+  }
+  button.button-mat:hover {
+    background-color: #ff9d0a!important;
+    color: #000000;
+  }
+   
+p.info{
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: left;
+  }
+
+.almacen {
+color: #1E6091 !important;
+font-size: 3.5vw !important; 
+white-space: normal; 
+max-width: unset; 
+float: right; 
+font-weight: bold; 
+}
+
+
+
+.almacen-sub1{
+  text-decoration: underline;
+  color: #1E6091 !important;
+  font-size: 3.5vw !important; 
+  white-space: normal; 
+    max-width: unset;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+
+}
+.almacen-sub2{
+  text-decoration: underline;
+  color: #329702 !important;
+  font-size: 3.5vw !important; 
+  white-space: normal; 
+    max-width: unset;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+
+}
+.almacen-sub3{
+  text-decoration: underline;
+  color: #ff9d0a !important;
+  font-size: 3.5vw !important; 
+  white-space: normal; 
+    max-width: unset;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+
+} 
+.medida{
+  text-decoration: underline; 
+  color: #fff;
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #FBB02D; 
+
+  
+}
+
+.horizontal-item {
+  margin-right: 20px;
+  text-align: center;
+}
+
+
+
+.info-header {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.info-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  background-color:  #FBB02D; /* Color de fondo cuando el elemento está activo */
+}
+.background-style-3 {
+  min-height: 100vh; 
+  background-image: url('https://fundahrse.org/wp-content/uploads/2015/09/Tres-Valles.png'); 
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center bottom 10px;
+  
+}
+
+

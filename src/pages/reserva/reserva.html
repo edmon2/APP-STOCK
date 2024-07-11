@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+     
+    </button>
+    <ion-title></ion-title>    
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showConfirm()">
+        SALIR 
+        <ion-icon name="exit" ></ion-icon>
+      </button>
+    </ion-buttons>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="material background-style-3"  >
+   <!--  formulario de búsqueda para obtener información sobre una reserva, 
+    que consiste en un campo de entrada y un botón de búsqueda.  -->
+  <div class="search-bar">
+    <ion-item>
+      <ion-input type="search" class="input-large" [(ngModel)]="rest" [disabled]="inputDisabled"
+        placeholder="Ingrese el número de reserva"></ion-input>
+      <ion-icon name="search" item-start></ion-icon>
+    </ion-item>
+
+    <button ion-button class="button-mat" (click)="getReservaInfo()" [disabled]="!rest || inputDisabled">Obtener
+      información</button>
+  </div>
+
+  
+  <div class="card-center" *ngIf="reservationInfo.length > 0">
+    <ion-grid>
+      <!-- Mostrar encabezado de la reserva -->
+      <ion-row> 
+        <ion-col>
+          <ion-card class="info-card">
+           <!-- <p class="enumeration-number"> INFORMACIÓN DE RESERVA</p>-->
+             
+            <ion-card-content> 
+             
+              <ion-label class="name-exp">Número de Reserva: <span class="medida">{{ reservationInfo[0].reserva }}</span></ion-label>
+              <ion-label class="name-exp">Fecha: <span class="medida">{{ reservationInfo[0].fecha }}</span></ion-label>
+              <ion-label class="name-exp">Clase de Movimiento: <span class="medida">{{ reservationInfo[0].movimiento }}</span></ion-label>
+              <ion-label class="name-exp">Destino de Mercancía: <span class="medida">{{ reservationInfo[0].mercancia }}</span></ion-label>
+              <ion-label class="name-exp">Centro de Coste: <span class="medida">{{ reservationInfo[0].coste }}</span></ion-label>
+            </ion-card-content>
+          <!-- Mostrar detalle de la reserva -->
+            <ion-list>
+              <ion-item *ngFor="let det of reservationDet;">
+                <div (click)="toggleDetail(det)" class="info-header" [class.active]="det.showDetail">
+                  <ion-icon name="arrow-dropdown-circle" item-start></ion-icon>
+                  <p class="info">Posición: <span class="almacen">{{ det.posicion }}</span></p>
+                 
+                </div>
+                  
+                <div *ngIf="det.showDetail" class="info-detail" >
+                  <p class="info">Centro: <span class="almacen">{{ det.centro }}</span></p>
+                  <p class="info">Almacén: <span class="almacen">{{ det.almacen }}</span></p>
+                  <p class="info">Material: <span class="almacen">{{ det.codigo_material }}</span></p>
+                  <p class="info">Descripción: <span class="almacen">{{ det.material }}</span></p>
+                  <p class="info">Um: <span class="almacen">{{ det.um }}</span></p>
+              <!-- Detalles pero con campos calculados -->
+                  <div class="horizontal-container" >
+                    <div class="horizontal-item" >
+                      <p class="info">Cantidad Solicitada</p> <span class="almacen-sub1">{{ det.cantidad_necesaria }}</span>
+                    </div>
+                    <div class="horizontal-item">
+                      <p class="info">Cantidad Tomada</p>
+                      <span class="almacen-sub2">{{ det.cantidad_tomada }}</span>
+                    </div>
+                    <div class="horizontal-item">
+                      <p class="info">Cantidad Pendiente</p>
+                      <span class="almacen-sub3">{{ det.cantidad_necesaria - det.cantidad_tomada }}</span>
+                    </div>
+                </div>
+                </div>
+                <div class="hr"></div>
+              </ion-item>
+              </ion-list>
+              
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

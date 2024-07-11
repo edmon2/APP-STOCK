@@ -1,0 +1,60 @@
+.background-style {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://productoresdeazucarhonduras.com/wp-content/uploads/elementor/thumbs/600x765-4-ptr9vkutf819nnbwdx72ujsk5sukizna80h9rf5js4.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.custom-buttonmenu {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.custom-buttonmenu:hover {
+  background-color: #ff9100 !important;
+  box-shadow: 0px 15px 20px rgba(255, 166, 0, 0.884);
+  color: #000000;
+  transform: translateY(-7px);
+}
+
+.custom-buttonmenu:active {
+  transform: translateY(-1px);
+}
+
+.content-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.custom-buttonmenu ion-icon {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+.title-menu {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 50px;
+  color: #ffffff;
+}/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-toolbar color="light">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+       
+      </button>
+      <ion-title></ion-title>    
+      <ion-buttons end>
+        <button ion-button icon-only (click)="showConfirm()">
+          SALIR 
+          <ion-icon name="exit" ></ion-icon>
+        </button>
+      </ion-buttons>  
+    </ion-toolbar>
+</ion-header>
+  <!-- formulario de búsqueda dinámico que se adapta según el valor de Operacion, permitiendo al usuario buscar 
+    información sobre materiales utilizando diferentes criterios de búsqueda. -->
+<ion-content class="material">
+  <div *ngIf="Operacion !== 2 && Operacion !== 3" class="search-bar">
+    <ion-item>
+      <ion-input type="search" class="input-large" [(ngModel)]="matnr" [disabled]="inputDisabled"
+        placeholder="Ingrese el número de material"></ion-input>
+      <ion-icon name="search" item-start></ion-icon>
+    </ion-item>
+
+    <button ion-button class="button-mat" (click)="getMaterialInfo()" [disabled]="!matnr || inputDisabled">Obtener
+      información</button>
+  </div>
+
+  <div *ngIf="Operacion === 2 " class="search-bar">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="Desp" [disabled]="inputDisabled" placeholder="Ingrese el nombre del material "
+        (ngModelChange)="Desp = $event.toUpperCase()"></ion-input>
+      <ion-icon name="search" item-start></ion-icon>
+    </ion-item>
+
+    <button ion-button class="button-mat" (click)="getMaterialInfo()" [disabled]="!Desp || inputDisabled">Obtener
+      información</button>
+  </div>
+
+  <div *ngIf="Operacion === 3" class="search-bar">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="Desp" [disabled]="inputDisabled" placeholder="Ingrese un número de pieza"></ion-input>
+      <ion-icon name="search" item-start></ion-icon>
+    </ion-item>
+
+    <button ion-button class="button-mat" (click)="getMaterialInfo()" [disabled]="!Desp || inputDisabled">Obtener
+      información</button>
+  </div>
+ 
+  <div class="card-center" *ngIf="materialInfo.length > 0">
+    <ion-grid>
+      <ion-row *ngFor="let enc of materialENC; let i = index">
+        <ion-col>
+          <ion-card class="info-card">
+            <p class="enumeration-number"> Material #{{ i + 1 }}</p>
+           <!-- Mostrar encabezados del material -->
+            <ion-card-content> 
+              
+              <ion-label class="name-exp">No. de Material: <span class="medida">{{ enc.matrn }}</span> </ion-label>
+              <ion-label class="name-exp">Descripción: <span class="medida">{{ enc.maktx }}</span></ion-label>
+              <ion-label class="name-exp">Unidad de Medida: <span class="medida">{{ enc.meins }}</span></ion-label>
+            </ion-card-content>
+
+                  <!-- Mostrar detalles del material -->
+            <div *ngFor="let itemInfo of materialInfo;" >
+              <ion-item *ngIf=" itemInfo.matrn == enc.matrn ">
+                <ion-list>
+                  <p class="info">Centro: <span class="almacen">{{ itemInfo.centro }}</span></p>
+                  <p class="info">Sociedad: <span class="almacen">{{ itemInfo.sociedad }}</span></p>
+                  <p class="info">Almacén: <span class="almacen">{{ itemInfo.almacen }}</span></p>
+                  <p class="info">Ubicación: <span class="almacen">{{ itemInfo.ubicacion }}</span></p>
+                  <p class="info">Libre Utilización: <span class="almacen">{{ itemInfo.libre_utilizacion }}</span></p>
+                  <p class="info">Consignación Proveedor:<span class="almacen">{{ itemInfo.consignacion_prov }}</span></p>
+                  <p class="info">Stock de Proyecto:<span class="almacen">{{ itemInfo.stock_proyecto }}</span></p>
+                </ion-list>
+                <div class="hr"></div>
+              </ion-item>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+           

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons class="toolbar-start" >
+      <button  ion-button  icon-only (click)="goBack()">
+       
+        <ion-icon name="arrow-back"></ion-icon>
+        <ion-title>Regresar</ion-title>
+      </button>
+      
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="content-menu background-style-2">
+  <div class="title-menu"> SELECCIONE UN MÓDULO</div>
+
+  <p>{{ mensajeSaludo }}</p>
+  <ion-grid style="display: flex; justify-content: flex-end;">
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <button ion-button class="custom-buttonmenu" (click)="menuPagina()">
+          <ion-icon name="archive" item-start></ion-icon>
+          RESERVAS
+        </button>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <button ion-button class="custom-buttonmenu" (click)="menuPaginaStock()">
+          <ion-icon name="clipboard" item-start></ion-icon>
+          STOCK MATERIALES
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

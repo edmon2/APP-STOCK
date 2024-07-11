@@ -1,0 +1,84 @@
+page-login {
+     
+}
+ion-item {
+--background: transparent;
+}
+
+
+ion-label {
+--background: transparent;
+}
+
+.dark {
+  color: black;
+}
+
+ion-input {
+--background: transparent;
+}
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://productoresdeazucarhonduras.com/wp-content/uploads/2022/08/1920x1100-16.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.background::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background-image: url('https://fundahrse.org/wp-content/uploads/2015/09/Tres-Valles.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translate(-50%, -50%);
+}
+
+ion-card.custom-item {
+width: 300px; 
+background-color: rgba(255, 255, 255, 0.8); 
+backdrop-filter: blur(5px); 
+--background: rgba(255, 255, 255, 0.5); 
+border-radius: 8px; 
+}
+
+
+.custom-item {
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+  
+  /* Estilos para el botón */
+button.custom-button {
+    background-color: #050505; 
+    color: #fff; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    width: 100%;
+    font-size: 1.2em;
+    margin-bottom: 10px; 
+}
+
+.custom-button:hover {
+background-color: #ff9d0a!important;
+color: #050505;
+}
+.custom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.custom-label {
+  border-radius: 8px;
+  margin-right: -1px;
+}
+ion-card-title.custom-title {
+  font-family: Arial, sans-serif!important;
+  font-size: 24px!important;
+}
+

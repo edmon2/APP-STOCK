@@ -1,0 +1,39 @@
+<ion-menu [content]="content" type="overlay">
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <ion-title>AZUCARERA TRES VALLES</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon name="{{p.icon }}" item-start></ion-icon>
+          {{p.title}}
+        </button>
+        <button ion-item (click)="toggleMenu()">
+          <ion-icon name="{{ isMenuOpen ? 'arrow-dropdown' : 'arrow-dropright' }}" item-start></ion-icon>
+         OPCIONES DE BÚSQUEDA
+        </button>
+        <div *ngIf="isMenuOpen">
+          <button ion-item (click)="redirigirPagina(1)">
+            <ion-icon name="barcode" item-start></ion-icon>
+            Buscar por número de material
+          </button>
+          <button ion-item (click)="redirigirPagina(2)">
+            <ion-icon name="clipboard" item-start></ion-icon>
+            Buscar por nombre de material
+          </button>
+          <button ion-item (click)="redirigirPagina(3)">
+            <ion-icon name="construct" item-start></ion-icon>
+            Buscar por código de pieza
+          </button>
+          
+        </div>
+      </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

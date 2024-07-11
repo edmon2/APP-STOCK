@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons class="toolbar-start">
+      <button ion-button  icon-only (click)="goBack()">
+       
+        <ion-icon name="arrow-back"></ion-icon>
+        <ion-title style="color: black !important;">Regresar</ion-title>
+      </button>
+      
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content-menu background-style">
+  <div class="title-menu"> ELIJA UNA OPCIÓN</div>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col size="12" size-md="6">
+        <button ion-button class="custom-buttonmenu" (click)="redirigirPagina(1)">
+          <ion-icon name="barcode" item-start></ion-icon>
+          Buscar por Código de Material
+        </button>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <button ion-button class="custom-buttonmenu" (click)="redirigirPagina(2)">
+          <ion-icon name="clipboard" item-start></ion-icon>
+          Buscar por Nombre de Material
+        </button>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <button ion-button class="custom-buttonmenu" (click)="redirigirPagina(3)">
+          <ion-icon name="construct" item-start></ion-icon>
+          Buscar por Código de Pieza
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
